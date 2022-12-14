@@ -139,4 +139,7 @@ def cnn_2():
   model.add(Dropout(0.2))
   model.add(Dense(4096, activation='relu'))
 
+  model.compile(loss='mean_squared_error', optimizer='adam', metrics=['mae'])
+  model.summary()
+
   return model

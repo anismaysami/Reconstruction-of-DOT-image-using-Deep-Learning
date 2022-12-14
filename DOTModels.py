@@ -78,6 +78,34 @@ def Single_layer():
   model.summary()
   return  model
 #%%
+def dense_conv():
+  model=Sequential()
+  #model.add(Dense(256, activation='relu', input_shape=(625,)))
+  #model.add(GaussianNoise(0.1))
+  model.add(Dense(625,  activation='relu',input_shape=(625,)))
+  model.add(GaussianNoise(0.1))
+  #model.add(Dropout(0.2))
+  model.add(Reshape((25,25,1)))
+
+  #model.add(Conv1D(32,2, activation='relu', padding='same'))
+  #model.add(Conv1D(32,2, activation='relu', padding='same'))
+  #model.add(Reshape((25,25)))
+  model.add(Conv2D(32,(3,3),activation='relu', padding='same'))
+  model.add(Conv2D(32,(3,3),activation='relu', padding='same'))
+  model.add(MaxPool2D(pool_size=(2,2), strides=2))
+  model.add(Conv2D(64,(5,5),activation='relu', padding='same'))
+  model.add(Conv2D(64,(5,5),activation='relu', padding='same'))
+  model.add(MaxPool2D(pool_size=(2,2), strides=2))
+  #model.add(Conv2D(64,(7,7),activation='relu', padding='same'))
+  #model.add(Conv2D(64,(7,7),activation='relu', padding='same'))
+  model.add(Flatten())
+  #model.add(Dense(625, activation='relu'))
+  #model.add(Dropout(0.2))
+  model.add(Dense(4096, activation='relu'))
+  model.compile(loss='mean_squared_error', optimizer='adam', metrics=['mae'])
+  model.summary()
+  return model
+#%%
 def cnn_2():
   model=Sequential()
   model.add(Conv2D(32,(1,1),activation='relu',strides=1, padding='same',input_shape=(25,25,1)))

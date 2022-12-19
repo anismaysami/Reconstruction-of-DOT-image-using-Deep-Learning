@@ -1,5 +1,8 @@
 %This function create 3D volumetric mesh
 %by Anis Maysami
+%Bio-optical imaging laboratory
+%Shahid Beheshti University
+
 function MakeMesh(x,img,maxvol,problem_type,volin,outmesh)
 %% 
 %the first step is to load a binary or gray-scale image

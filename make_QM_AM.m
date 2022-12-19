@@ -1,6 +1,9 @@
 %Creating source and detector arrangement around Tissue
 %By Anis Maysami
 %29 July 2021
+%Bio-optical imaging Laboratory 
+%Shahid Beheshti University
+
 function [Q,M] = make_QM_AM() 
 %%
 %defining coordinate

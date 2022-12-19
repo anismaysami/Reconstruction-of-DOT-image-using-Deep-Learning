@@ -2,7 +2,7 @@
 %This function Solves Forward Problem of  CWDOT
 %By Anis Maysami
 %31 July 2021
-%Bio-optical imaging Lab 
+%Bio-optical imaging Laboratory 
 %Shahid Beheshti University
 function ForwardDataset(hmesh,input_geo,ref_bkg,mua_bkg,mus_bkg,freq,mua_file,data_file)
 %ref_bkg:                    refractive index

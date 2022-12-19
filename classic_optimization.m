@@ -1,4 +1,7 @@
-
+%This function Solves Inverse Problem of  CWDOT
+%By Anis Maysami
+%Bio-optical imaging Laboratory 
+%Shahid Beheshti University
 
 function [muarec] =classic_optimization(invmesh,data,mua_bkg,mus_bkg,ref_bkg,tau,itrmax,grd,freq)
 %Inverse solver

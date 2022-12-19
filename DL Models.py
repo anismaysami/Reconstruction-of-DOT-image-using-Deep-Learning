@@ -3,6 +3,8 @@
 Created on Mon Dec 12 23:04:01 2022
 
 @author: Anis Maysami
+Bio-optical imaging labratory 
+Shahid Beheshti University
 """
 #This function createss a fully connected neural network (MLP_MODEL) (MASTER)
 #convoloutional neural network (DOT_convnet) (MASTER)

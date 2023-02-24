@@ -9,15 +9,14 @@ def reconstruction(model, index, data, realmua, width, height):
 
     
     #display predicted by our model
-    plt.subplot(1,2)
-    plt.imshow(mua_hat[index].reshape(width,height))
+    fig,ax = plt.subplots(1,2)
+    ax[0,0].imshow(mua_hat[index].reshape(width,height))
     title_1=print(f"Predicted by {model}")
-    plt.title(title_1)
-    plt.colorbar()
+    ax[0,0].set_title(title_1)
     
     #displays ground truth
     maximum_value_mua=max(realmua)
-    plt.imshow(realmua.reshape(width,height))
+    ax[0,1].imshow(realmua.reshape(width,height))
     title_2='Ground truth compared to {} - \u03BCa={} mm{}'.format(model, maximum_value_mua, get_super("-1"))
-    plt.title(title_2)
-    plt.colorbar()
+    ax[0,1].title(title_2)
+    fig.colorbar()

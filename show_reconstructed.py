@@ -29,4 +29,4 @@ def reconstruction(model, model_name, index, data, realmua, width, height):
     plt.colorbar(cax=cax)
     plt.tight_layout()
     #plt.colorbar()
-    #plt.subplots_adjust(bottom=-1, right=0.8, top=0.9)
+    #plt.subplots_adjust(bottom=0.1, right=0.8, top=0.9)

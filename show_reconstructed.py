@@ -1,7 +1,7 @@
 
 #This script reconstruct DOT images
 import matplotlib.pyplot as plt
-import get_super
+from superscript import get_super
 def reconstruction(model, index, data, realmua, width, height):
     #data is our measurement
     #realmua is real mua
